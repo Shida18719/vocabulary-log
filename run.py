@@ -1,3 +1,7 @@
+"""
+ Import required modules
+ """
+from PyDictionary import PyDictionary
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -12,8 +16,12 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('vocabulary_log')
 
-new_words = SHEET.worksheet("new_words") 
+# new_words = SHEET.worksheet("new_words") 
 
-data = new_words.get_all_values()
+# data = new_words.get_all_values()
 
-print(data)
+# print(data)
+
+dictionary = PyDictionary()
+
+print(dictionary.meaning("Incomprehensible"))
