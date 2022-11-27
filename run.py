@@ -23,5 +23,31 @@ SHEET = GSPREAD_CLIENT.open('vocabulary_log')
 # print(data)
 
 dictionary = PyDictionary()
+while True:
+    print("Please enter new vocabulary words.")
+    print("Input words should be letters.")
+    print("Letters should be between 1 and 22.")
+    print("Example: Incomprehensibilities\n")
 
-print(dictionary.meaning("Incomprehensible"))
+    new_word = input("Enter new word here: \n")
+
+    if new_word == "":
+        print("Input is valid!")
+        break
+
+    # return new_word
+    print(dictionary.meaning(new_word))
+
+
+# vocabulary()
+
+# def main():
+#     """
+#     Run all program functions
+#     """
+#     words_list = vocabulary()
+
+# main() 
+
+
+
