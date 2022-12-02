@@ -1,7 +1,7 @@
 """
  Import required module/library
  """
-# import sys
+import sys
 from PyDictionary import PyDictionary
 from spellchecker import SpellChecker
 # from art import tprint
@@ -26,6 +26,28 @@ dictionary = PyDictionary()
 spell = SpellChecker(distance=1)
 # Spread sheet variable
 vocabulary = SHEET.worksheet("vocabulary")
+
+
+def check_word():
+    """
+    Take user input and display word meaning
+    Check user misspelt word
+    """
+    word = input("\nEnter new word you want to look up: \n")
+    if word == "":
+        sys.exit()
+    else:
+        meaning = (dictionary.meaning(word, disable_errors=True))
+        if meaning is None:
+            print("Incorrect word! Please double check it")
+        else:
+            try:
+                print("Noun", meaning["Noun"])
+                print("Verb", meaning["Verb"])
+                print("Adjective", meaning["Adjective"])
+                print("Adverb", meaning["Adverb"])
+            except KeyError:
+                pass
 
 
 def display_menu():
