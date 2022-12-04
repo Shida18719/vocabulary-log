@@ -77,6 +77,38 @@ Select "Deploy" from the heading tabs
 
 + Click 'View' to visit the deployed site.
 
+
+## Forking
+***
+
+Fork this repository on Github with the following steps:
+
++ Log it to GitHub (create account if necessary)
++ Locate the GitHub Respository
++ Find the 'Fork' menu on the top right, click on the small down arrow
++ Select '+ Create a new fork'
++ Remane repository to your choice
++ Click 'Create Fork'
++ The forked version of this repository is all yours
+
+
+## Cloning
+***
+
+Clone this repository on Github with the following steps:
+
++ Log in to GitHub (create an account if necessary)
++ Locate the GitHub Respository
++ Find and click on the 'Code' menu in the mid-top right of the page.
++ Choose to either download or open in GitHub Desktop, OR
++ Choose the HTTPS option and copy the URL to your clipboard. 
+  + To clone the repository using HTTPS, under "HTTPS", copy the url
+  + To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then copy the url
+  + To clone a repository using GitHub CLI, click GitHub CLI, then copy url
+  + Open Terminal and change the current directory to where you want the cloned directory.
+  + Type git clone, and paste the url, press Enter to create your local clone
+
+
 ***
 
 # 8. Citation of Sources
