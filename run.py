@@ -23,7 +23,7 @@ SHEET = GSPREAD_CLIENT.open('vocabulary_log')
 # print(SHEET.readlines())
 
 # Variable for spreadsheet worksheets
-vocabulary = SHEET.worksheet("vocabulary")
+# vocabulary_sheet = SHEET.worksheet("vocabulary")
 
 
 # Create an instance from  module
@@ -61,6 +61,32 @@ def check_word():
                 pass
 
 
+def worksheet_log():
+    """
+    Update spread sheet, add new row with the new word searched
+    by the user from the dictionary
+    """
+    print("\nUpdating vocabulary log...\n", word)
+    vocabulary_worksheet = SHEET.worksheet("vocabulary")
+    vocabulary_worksheet.append_row(word)
+    print("Updating Done. Word Logged! \n")
+
+
+# def title_page():
+#     """
+#     Display page title using tprint art
+#     """
+#     tprint("VOCABULARY  LOG")
+
+
+# def open_page():
+#     """
+#     Welcome page
+#     """
+#     title_page()
+#     print("\n *** Welcome to Vocabulary Log ***")
+
+
 def display_menu():
     """
     Main display menu
@@ -81,7 +107,7 @@ def display_menu():
         if menu_choice == 1:
             check_word()
         elif menu_choice == 2:
-            update_worksheet()
+            worksheet_log()
         # elif menu_choice == 3:
         #     display_log()
         # elif menu_choice == 4:

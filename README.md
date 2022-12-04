@@ -77,6 +77,26 @@ Select "Deploy" from the heading tabs
 
 + Click 'View' to visit the deployed site.
 
+***
+
+# 8. Citation of Sources
+
+
+***
+
+# 9. Acknowledgements
+
+ I would like to acknowledge the following people who helped me along the way in completing my second milestone project:
+
+  + My family, for their uderstanding and support both morally and mentally.
+
+  + The slack community, for always being there.
+
+  + Tutor - George-Alexandru Ciobanu, for the time spent in guiding and explaing the steps to figuring things out .
+
+  + My Code Institute mentor jubril_mentor, for his guidance.
+
+  + Course provider - Code Institute
 
 
 
