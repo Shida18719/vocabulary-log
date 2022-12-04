@@ -81,12 +81,40 @@ Select "Deploy" from the heading tabs
 
 # 8. Citation of Sources
 
+## General Reference
+
++ [Code Institute Lesson Content](https://learn.codeinstitute.net/dashboard)
+
++ [GSpread](https://docs.gspread.org/en/latest/user-guide.html) use for Google Sheet API.
+
++ [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) used for checking syntax and logic.
+
++ [W3Schools] use for general python reference
+
+
+## Code Reference
+
++ Code used for the spelling checker - (Spelling Checker program using "pyspellchecker") was adapted from [Geeks for Geeks ](https://www.geeksforgeeks.org/spelling-checker-in-python/?ref=gcse)
+
++ Code used for dictionary word meaning error message [Stack Overflow](https://stackoverflow.com/questions/67990505/how-to-get-rid-of-python-dictionary-error-messages)
+
++ []()
+
++ []()
+
++ []()
+
++ []()
+
+
+
+
 
 ***
 
 # 9. Acknowledgements
 
- I would like to acknowledge the following people who helped me along the way in completing my second milestone project:
+ I would like to acknowledge the following people who helped me along the way in completing my third milestone project:
 
   + My family, for their uderstanding and support both morally and mentally.
 
