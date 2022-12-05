@@ -2,7 +2,6 @@
  Import required module/library
  """
 import sys
-# import random
 from PyDictionary import PyDictionary
 from spellchecker import SpellChecker
 # from art import tprint
@@ -10,6 +9,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 
+# API
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -34,7 +34,21 @@ spell = SpellChecker()
 word = ""
 
 
-def check_word():
+def save_log():
+    """
+    Ask the user if they would like to save their log,
+    """
+    key = ""
+    while True:
+        key = input(("\nWould you like to save your new vocabulary?"
+                     " (y/n)\n"))
+        if key.lower() == "y" or key.lower() == "yes":
+            worksheet_log(word)
+            input('\nPress "Enter" to continue\n')
+            return display_menu()   
+
+
+def search_word():
     """
     Take user input and display word meaning
     Search a word in dictionary and print its coincidences
@@ -61,14 +75,14 @@ def check_word():
                 pass
 
 
-def worksheet_log():
+def worksheet_log(word):
     """
     Update spread sheet, add new row with the new word searched
     by the user from the dictionary
     """
-    print("\nUpdating vocabulary log...\n", word)
+    print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
-    vocabulary_worksheet.append_row(word)
+    vocabulary_worksheet.append_row([word])
     print("Updating Done. Word Logged! \n")
 
 
@@ -97,17 +111,16 @@ def display_menu():
         print("""
         V O C A B U L A R Y  L O G
         ==========================
-        1. Search, display and log meaning of words
-        2. Search random words
-        3. Update worksheet with new word
-        4  Display worksheet log
-        5. Exit Program
+        1. Search and display meaning of words
+        2. Save new word to worksheet
+        3. Display worksheet log
+        4. Exit Program
             """)
-        menu_choice = int(input("Select a number of your choice to begin:\n"))
+        menu_choice = int(input("Select number of your choice to continue:\n"))
         if menu_choice == 1:
-            check_word()
+            search_word()
         elif menu_choice == 2:
-            worksheet_log()
+            save_log()
         # elif menu_choice == 3:
         #     display_log()
         # elif menu_choice == 4:
