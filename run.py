@@ -36,16 +36,32 @@ word = ""
 
 def save_log():
     """
-    Ask the user if they would like to save their log,
+    Ask the user if they would like to save the new vocabulary,
+    Confirm input. If yes, the worksheet_log(word) function is triggered
+    to log word to spreadsheet.
+    If not, validate user input for their log choice, 
+    either save and return to display_menu or exit the program
     """
     key = ""
-    while True:
+    while True: 
         key = input(("\nWould you like to save your new vocabulary?"
                      " (y/n)\n"))
         if key.lower() == "y" or key.lower() == "yes":
             worksheet_log(word)
-            input('\nPress "Enter" to continue\n')
-            return display_menu()   
+            input('\nPress "Enter" to return to display menu\n')
+            display_menu()
+        elif key.lower() == "n " or key.lower() == "no":
+            print("\nAre you sure? You don't want to save the new vocabulary?")
+            user_choice = input('\n"y" = Quit and no word saved.'
+                                ' "n" = Save and return to Main Menu.\n')
+            if user_choice.lower() == "y" or user_choice.lower() == "yes":
+                sys.exit()
+            elif user_choice.lower() == "n" or user_choice.lower() == "no":
+                print("\nSaving vocabulary...")
+                worksheet_log(word)
+                input('\nPress "Enter" to return to display menu')
+            else:
+                print("Log completed")         
 
 
 def search_word():
