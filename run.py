@@ -73,14 +73,16 @@ def search_word():
     global word
     word = input("\nEnter new word you want to look up: \n")
     corrected_word = spell.correction(word)
-    print("corrected_word ", corrected_word)
+
+    if word is not corrected_word:
+        print("corrected_word: ", corrected_word)
 
     if word == "":
         sys.exit()
     else:
         meaning = (dictionary.meaning(corrected_word, disable_errors=True))
         if meaning is None:
-            print("Word not found")
+            print("Word not found in dictionary")
         else:
             try:
                 print("Noun", meaning["Noun"])
