@@ -2,6 +2,7 @@
  Import required module/library
  """
 import sys
+import time
 from PyDictionary import PyDictionary
 from spellchecker import SpellChecker
 # from art import tprint
@@ -32,7 +33,20 @@ spell = SpellChecker()
 
 # Global variable
 word = ""
-meaning = ""
+
+
+def short_sleep():
+    """
+    Creating a short sleep timer to delay printing
+    """
+    time.sleep(3)
+
+
+def long_sleep():
+    """
+    Creating a Long sleep timer to delay printing
+    """
+    time.sleep(5)   
 
 
 def save_log():
@@ -128,7 +142,7 @@ def display_log():
     print("\nLooking good..... Keep it up\n")
     input('\nPress "Enter" to return to display menu')
     display_menu()
-    
+
 
 # def title_page():
 #     """
@@ -137,17 +151,24 @@ def display_log():
 #     tprint("VOCABULARY  LOG")
 
 
-# def open_page():
-#     """
-#     Welcome page
-#     """
-#     title_page()
-#     print("\n *** Welcome to Vocabulary Log ***")
+def open_page():
+    """
+    Welcome page
+    """
+    # title_page()
+    long_sleep()
+    print("\n *** Welcome to Vocabulary Log ***")
+    short_sleep()
+    print("\nVocabulary Log is an interactive mini version of English "
+          "dictionary, where you can log new vocabulary words.")
+    short_sleep()
+    display_menu()
 
 
 def display_menu():
     """
-    Main display menu
+    Main display menu, on user's choice
+    Triggers the chosen function 
     """
     while True:
 
@@ -176,4 +197,5 @@ def display_menu():
     #     print("Invalid entry")
 
 
-display_menu()
+# display_menu()
+open_page()
