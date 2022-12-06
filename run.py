@@ -23,7 +23,7 @@ SHEET = GSPREAD_CLIENT.open('vocabulary_log')
 # print(SHEET.readlines())
 
 # Variable for spreadsheet worksheets
-# vocabulary_sheet = SHEET.worksheet("vocabulary")
+vocabulary_sheet = SHEET.worksheet("vocabulary")
 
 
 # Create an instance from  module
@@ -32,6 +32,7 @@ spell = SpellChecker()
 
 # Global variable
 word = ""
+meaning = ""
 
 
 def save_log():
@@ -48,6 +49,7 @@ def save_log():
                      " (y/n)\n"))
         if key.lower() == "y" or key.lower() == "yes":
             worksheet_log(word)
+            # log_meaning(meaning)
             input('\nPress "Enter" to return to display menu\n')
             display_menu()
         elif key.lower() == "n " or key.lower() == "no":
@@ -59,9 +61,10 @@ def save_log():
             elif user_choice.lower() == "n" or user_choice.lower() == "no":
                 print("\nSaving vocabulary...")
                 worksheet_log(word)
+                # log_meaning(meaning)
                 input('\nPress "Enter" to return to display menu')
             else:
-                print("Log completed")         
+                print("Log completed")       
 
 
 def search_word():
@@ -96,13 +99,36 @@ def search_word():
 def worksheet_log(word):
     """
     Update spread sheet, add new row with the new word searched
-    by the user from the dictionary
+    by the user
     """
     print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
     vocabulary_worksheet.append_row([word])
     print("Updating Done. Word Logged! \n")
 
+
+# def log_meaning(meaning):
+#     """
+#     Update spread sheet, add new row with the new word searched
+#     by the user from the dictionary
+#     """
+#     vocabulary_worksheet = SHEET.worksheet("vocabulary")
+#     meaning_row = vocabulary_worksheet
+#     meaning_row.append_row(meaning)
+    # print("Updating Done. Word Logged! \n")
+
+
+def display_log():
+    """
+    Get and display saved vocabulary from the spreadsheet and print it to user,
+    """
+    print("fetching your saved vocabulay...\n")
+    fecth_log = vocabulary_sheet.get_all_values()
+    print(fecth_log)
+    print("\nLooking good..... Keep it up\n")
+    input('\nPress "Enter" to return to display menu')
+    display_menu()
+    
 
 # def title_page():
 #     """
@@ -134,13 +160,13 @@ def display_menu():
         3. Display worksheet log
         4. Exit Program
             """)
-        menu_choice = int(input("Select number of your choice to continue:\n"))
+        menu_choice = int(input("Choose number between (1-4) to continue:\n"))
         if menu_choice == 1:
             search_word()
         elif menu_choice == 2:
             save_log()
-        # elif menu_choice == 3:
-        #     display_log()
+        elif menu_choice == 3:
+            display_log()
         # elif menu_choice == 4:
             break
         else:
