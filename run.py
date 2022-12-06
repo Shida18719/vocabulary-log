@@ -3,6 +3,7 @@
  """
 import sys
 import time
+from os import system
 from PyDictionary import PyDictionary
 from spellchecker import SpellChecker
 # from art import tprint
@@ -46,7 +47,21 @@ def long_sleep():
     """
     Creating a Long sleep timer to delay printing
     """
-    time.sleep(5)   
+    time.sleep(5)
+
+
+def clear():
+    """
+    Clears the terminal
+    """
+    system('clear')
+
+
+# def title_page():
+#     """
+#     Display page title using tprint art
+#     """
+#     tprint("VOCABULARY  LOG")   
 
 
 def save_log():
@@ -144,14 +159,7 @@ def display_log():
     display_menu()
 
 
-# def title_page():
-#     """
-#     Display page title using tprint art
-#     """
-#     tprint("VOCABULARY  LOG")
-
-
-def open_page():
+def welcome_page():
     """
     Welcome page
     """
@@ -162,6 +170,7 @@ def open_page():
     print("\nVocabulary Log is an interactive mini version of English "
           "dictionary, where you can log new vocabulary words.")
     short_sleep()
+    input('\nPress "Enter" to continue\n')
     display_menu()
 
 
@@ -171,8 +180,7 @@ def display_menu():
     Triggers the chosen function 
     """
     while True:
-
-        # open_page()
+        clear()
         print("""
         V O C A B U L A R Y  L O G
         ==========================
@@ -198,4 +206,4 @@ def display_menu():
 
 
 # display_menu()
-open_page()
+welcome_page()
