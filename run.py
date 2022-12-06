@@ -34,20 +34,21 @@ spell = SpellChecker()
 
 # Global variable
 word = ""
+meaning = ""
 
 
 def short_sleep():
     """
     Creating a short sleep timer to delay printing
     """
-    time.sleep(3)
+    time.sleep(1.5)
 
 
 def long_sleep():
     """
     Creating a Long sleep timer to delay printing
     """
-    time.sleep(5)
+    time.sleep(3)
 
 
 def clear():
@@ -78,7 +79,7 @@ def save_log():
                      " (y/n)\n"))
         if key.lower() == "y" or key.lower() == "yes":
             worksheet_log(word)
-            # log_meaning(meaning)
+            log_meaning(meaning)
             input('\nPress "Enter" to return to display menu\n')
             display_menu()
         elif key.lower() == "n " or key.lower() == "no":
@@ -90,7 +91,7 @@ def save_log():
             elif user_choice.lower() == "n" or user_choice.lower() == "no":
                 print("\nSaving vocabulary...")
                 worksheet_log(word)
-                # log_meaning(meaning)
+                log_meaning(meaning)
                 input('\nPress "Enter" to return to display menu')
             else:
                 print("Log completed")       
@@ -136,22 +137,26 @@ def worksheet_log(word):
     print("Updating Done. Word Logged! \n")
 
 
-# def log_meaning(meaning):
-#     """
-#     Update spread sheet, add new row with the new word searched
-#     by the user from the dictionary
-#     """
-#     vocabulary_worksheet = SHEET.worksheet("vocabulary")
-#     meaning_row = vocabulary_worksheet
-#     meaning_row.append_row(meaning)
-    # print("Updating Done. Word Logged! \n")
+def log_meaning(meaning):
+    """
+    Update spread sheet, add new row with the new word searched
+    by the user from the dictionary
+    """
+    meaning = ""
+    print(meaning)
+    vocabulary_worksheet = SHEET.worksheet("vocabulary")
+    meaning_row = vocabulary_worksheet
+    meaning_row.append_row([meaning])
+    print("Updating Done. Word Logged! \n")
 
 
 def display_log():
     """
-    Get and display saved vocabulary from the spreadsheet and print it to user,
+    Get and prints saved vocabulary from the spreadsheet back the to user,
     """
+    clear()
     print("fetching your saved vocabulay...\n")
+    short_sleep()
     fecth_log = vocabulary_sheet.get_all_values()
     print(fecth_log)
     print("\nLooking good..... Keep it up\n")
@@ -159,11 +164,35 @@ def display_log():
     display_menu()
 
 
+def exit_progm():
+    """
+    Function #4 to allow user exit program, with a validation of input
+    """
+    while True:
+        clear()
+        print("\nSo you are calling it a quit?\n")
+        exit_choice = input('\n"y" = Stay. "n" = Leave:\n')
+        if exit_choice.lower() == "n" or exit_choice.lower() == "no":
+            clear()
+            print("\nExiting...\n")
+            short_sleep()
+            tprint("Thank you")
+            long_sleep()
+            sys.exit()
+        elif exit_choice.lower() == "y" or exit_choice.lower() == "yes":
+            display_menu()
+        else:
+            clear()
+            print("\nNice decision...")
+            long_sleep()
+
+
 def welcome_page():
     """
     Welcome page
     """
     # title_page()
+    clear()
     long_sleep()
     print("\n *** Welcome to Vocabulary Log ***")
     short_sleep()
@@ -176,11 +205,10 @@ def welcome_page():
 
 def display_menu():
     """
-    Main display menu, on user's choice
-    Triggers the chosen function 
+    Main display menu, on user's choice,
+    Triggers the chosen function
     """
     while True:
-        clear()
         print("""
         V O C A B U L A R Y  L O G
         ==========================
@@ -196,14 +224,11 @@ def display_menu():
             save_log()
         elif menu_choice == 3:
             display_log()
-        # elif menu_choice == 4:
-            break
+        elif menu_choice == 4:
+            exit_progm()
         else:
             print("Invalid number! Enter a number between 1-4: \n")
-
-    # except:
-    #     print("Invalid entry")
+            long_sleep()
 
 
-# display_menu()
 welcome_page()
