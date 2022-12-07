@@ -4,9 +4,9 @@
 import sys
 import time
 from os import system
+from art import tprint
 from PyDictionary import PyDictionary
 from spellchecker import SpellChecker
-# from art import tprint
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -22,7 +22,6 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('vocabulary_log')
-# print(SHEET.readlines())
 
 # Variable for spreadsheet worksheets
 vocabulary_sheet = SHEET.worksheet("vocabulary")
@@ -48,7 +47,7 @@ def long_sleep():
     """
     Creating a Long sleep timer to delay printing
     """
-    time.sleep(3)
+    time.sleep(3.5)
 
 
 def clear():
@@ -58,13 +57,16 @@ def clear():
     system('clear')
 
 
-# def title_page():
-#     """
-#     Display page title using tprint art
-#     """
-#     tprint("VOCABULARY  LOG")   
+def title_page():
+    """
+    Display page title using tprint art
+    """
+    tprint("Welcome")
+    tprint("   To")
+    tprint("  VOCABULARY")
+    tprint("    LOG")
 
-
+  
 def save_log():
     """
     Ask the user if they would like to save the new vocabulary,
@@ -73,16 +75,17 @@ def save_log():
     If not, validate user input for their log choice, 
     either save and return to display_menu or exit the program
     """
-    key = ""
+    save = ""
     while True: 
-        key = input(("\nWould you like to save your new vocabulary?"
+        save = input(("\nWould you like to save your new vocabulary?"
                      " (y/n)\n"))
-        if key.lower() == "y" or key.lower() == "yes":
-            worksheet_log(word)
-            log_meaning(meaning)
+        if save.lower() == "y" or save.lower() == "yes":
+            worksheet_log()
+            short_sleep()
+            clear()
             input('\nPress "Enter" to return to display menu\n')
             display_menu()
-        elif key.lower() == "n " or key.lower() == "no":
+        elif save.lower() == "n " or save.lower() == "no":
             print("\nAre you sure? You don't want to save the new vocabulary?")
             user_choice = input('\n"y" = Quit and no word saved.'
                                 ' "n" = Save and return to Main Menu.\n')
@@ -90,8 +93,7 @@ def save_log():
                 sys.exit()
             elif user_choice.lower() == "n" or user_choice.lower() == "no":
                 print("\nSaving vocabulary...")
-                worksheet_log(word)
-                log_meaning(meaning)
+                worksheet_log()
                 input('\nPress "Enter" to return to display menu')
             else:
                 print("Log completed")       
@@ -113,6 +115,7 @@ def search_word():
     if word == "":
         sys.exit()
     else:
+        global meaning
         meaning = (dictionary.meaning(corrected_word, disable_errors=True))
         if meaning is None:
             print("Word not found in dictionary")
@@ -126,28 +129,29 @@ def search_word():
                 pass
 
 
-def worksheet_log(word):
+def worksheet_log():
     """
     Update spread sheet, add new row with the new word searched
     by the user
     """
     print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
+    # print(meaning)
     vocabulary_worksheet.append_row([word])
     print("Updating Done. Word Logged! \n")
 
 
-def log_meaning(meaning):
-    """
-    Update spread sheet, add new row with the new word searched
-    by the user from the dictionary
-    """
-    meaning = ""
-    print(meaning)
-    vocabulary_worksheet = SHEET.worksheet("vocabulary")
-    meaning_row = vocabulary_worksheet
-    meaning_row.append_row([meaning])
-    print("Updating Done. Word Logged! \n")
+# def log_meaning():
+#     """
+#     Update spread sheet, add new row with the new word searched
+#     by the user from the dictionary
+#     """
+#     # meaning = ""
+#     print(meaning)
+#     vocabulary_worksheet = SHEET.worksheet("vocabulary")
+#     meaning_row = vocabulary_worksheet
+#     meaning_row.append_row([meaning["Noun", "Adjective", "Adverb", "Verb"]])
+#     print("Updating Done. Word Logged! \n")
 
 
 def display_log():
@@ -176,14 +180,20 @@ def exit_progm():
             clear()
             print("\nExiting...\n")
             short_sleep()
-            tprint("Thank you")
+            tprint("Thank you", "random")
             long_sleep()
+            clear()
+            tprint("Bye", "random")
+            tprint("    Bye", "random")
+            long_sleep()
+            clear()
             sys.exit()
         elif exit_choice.lower() == "y" or exit_choice.lower() == "yes":
             display_menu()
         else:
             clear()
-            print("\nNice decision...")
+            tprint("Nice")
+            tprint("   Decision...")
             long_sleep()
 
 
@@ -191,7 +201,8 @@ def welcome_page():
     """
     Welcome page
     """
-    # title_page()
+    title_page()
+    long_sleep()
     clear()
     long_sleep()
     print("\n *** Welcome to Vocabulary Log ***")
