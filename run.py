@@ -62,9 +62,9 @@ def title_page():
     Display page title using tprint art
     """
     tprint("Welcome")
-    tprint("   To")
+    tprint("       To")
     tprint("  VOCABULARY")
-    tprint("    LOG")
+    tprint("       LOG")
 
   
 def save_log():
@@ -81,6 +81,7 @@ def save_log():
                      " (y/n)\n"))
         if save.lower() == "y" or save.lower() == "yes":
             worksheet_log()
+            # log_meaning()
             short_sleep()
             clear()
             input('\nPress "Enter" to return to display menu\n')
@@ -116,18 +117,34 @@ def search_word():
         sys.exit()
     else:
         global meaning
-        meaning = (dictionary.meaning(corrected_word, disable_errors=True))
+        meaning = dictionary.meaning(corrected_word, disable_errors=True)
+        # print("Meaning is: ", meaning)
+        types = ["Noun", "Verb", "Adjective", "Adverb"]
         if meaning is None:
             print("Word not found in dictionary")
         else:
-            try:
-                print("Noun", meaning["Noun"])
-                print("Verb", meaning["Verb"])
-                print("Adjective", meaning["Adjective"])
-                print("Adverb", meaning["Adverb"])
-            except KeyError:
-                pass
-
+            for meaningType in types:
+                try:
+                    print(f"{meaningType} {meaning[meaningType]}")
+                except KeyError:
+                    continue 
+            # try:
+            #     print("Noun", meaning["Noun"])
+            # except KeyError:
+            #     pass
+            # try:
+            #     print("Verb", meaning["Verb"])
+            # except KeyError:
+            #     pass
+            # try:
+            #     print("Adjective", meaning["Adjective"])
+            # except KeyError:
+            #     pass
+            # try:
+            #     print("Adverb", meaning["Adverb"])
+            # except KeyError:
+            #     pass                 
+                
 
 def worksheet_log():
     """
@@ -137,7 +154,7 @@ def worksheet_log():
     print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
     # print(meaning)
-    vocabulary_worksheet.append_row([word])
+    vocabulary_worksheet.append_row([word, str(meaning)])
     print("Updating Done. Word Logged! \n")
 
 
@@ -146,12 +163,15 @@ def worksheet_log():
 #     Update spread sheet, add new row with the new word searched
 #     by the user from the dictionary
 #     """
-#     # meaning = ""
-#     print(meaning)
+#     # print(meaning)
+#     print("ADDing meaning....")
 #     vocabulary_worksheet = SHEET.worksheet("vocabulary")
-#     meaning_row = vocabulary_worksheet
-#     meaning_row.append_row([meaning["Noun", "Adjective", "Adverb", "Verb"]])
-#     print("Updating Done. Word Logged! \n")
+#     # meaning_row = vocabulary_worksheet
+#     # meaning_row.append_row('B4', [meaning["Noun",
+#     #                        "Adjective", "Adverb", "Verb"]])
+#     vocabulary_worksheet.append_row([word, meaning])
+
+#     print("MeaningUpdating Done. Word Logged! \n")
 
 
 def display_log():
@@ -228,14 +248,14 @@ def display_menu():
         3. Display worksheet log
         4. Exit Program
             """)
-        menu_choice = int(input("Choose number between (1-4) to continue:\n"))
-        if menu_choice == 1:
+        menu_choice = input("Choose number between (1-4) to continue:\n")
+        if menu_choice == "1":
             search_word()
-        elif menu_choice == 2:
+        elif menu_choice == "2":
             save_log()
-        elif menu_choice == 3:
+        elif menu_choice == "3":
             display_log()
-        elif menu_choice == 4:
+        elif menu_choice == "4":
             exit_progm()
         else:
             print("Invalid number! Enter a number between 1-4: \n")
