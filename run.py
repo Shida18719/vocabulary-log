@@ -123,9 +123,9 @@ def search_word():
         if meaning is None:
             print("Word not found in dictionary")
         else:
-            for meaningType in types:
+            for meaning_type in types:
                 try:
-                    print(f"{meaningType} {meaning[meaningType]}")
+                    print(f"{meaning_type} {meaning[meaning_type]}")
                 except KeyError:
                     continue 
             # try:
@@ -179,9 +179,10 @@ def display_log():
     Get and prints saved vocabulary from the spreadsheet back the to user,
     """
     clear()
-    print("fetching your saved vocabulay...\n")
+    print("fetching your saved vocabulary...\n")
     short_sleep()
-    fecth_log = vocabulary_sheet.get_all_values()
+    # fecth_log = vocabulary_sheet.get_all_values()
+    fecth_log = [item for item in vocabulary_sheet.col_values(1) if item]
     print(fecth_log)
     print("\nLooking good..... Keep it up\n")
     input('\nPress "Enter" to return to display menu')
@@ -258,7 +259,7 @@ def display_menu():
         elif menu_choice == "4":
             exit_progm()
         else:
-            print("Invalid number! Enter a number between 1-4: \n")
+            print("Invalid entry! Enter a number between 1-4: \n")
             long_sleep()
 
 
