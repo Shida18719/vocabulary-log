@@ -81,12 +81,11 @@ def save_log():
                      " (y/n)\n"))
         if save.lower() == "y" or save.lower() == "yes":
             worksheet_log()
-            # log_meaning()
             short_sleep()
             clear()
             input('\nPress "Enter" to return to display menu\n')
             display_menu()
-        elif save.lower() == "n " or save.lower() == "no":
+        elif save.lower() == "n" or save.lower() == "no":
             print("\nAre you sure? You don't want to save the new vocabulary?")
             user_choice = input('\n"y" = Quit and no word saved.'
                                 ' "n" = Save and return to Main Menu.\n')
@@ -174,7 +173,7 @@ def worksheet_log():
 #     print("MeaningUpdating Done. Word Logged! \n")
 
 
-def display_log():
+def display_log_words():
     """
     Get and prints saved vocabulary from the spreadsheet back the to user,
     """
@@ -187,6 +186,31 @@ def display_log():
     print("\nLooking good..... Keep it up\n")
     input('\nPress "Enter" to return to display menu')
     display_menu()
+
+
+def display_last_2_logs():
+    """
+    Get and prints last 2 saved log from the spreadsheet back the to user,
+    """
+    clear()
+    print("fetching your last 2 saved vocabulary logs...\n")
+    short_sleep()
+    print("""
+    Here are your Last 2 Logs
+    *==*==*==*==*==*==*==*==*
+    """)
+    all_logs = vocabulary_sheet.get_all_values()
+    last_log = all_logs[-1]
+    prev_log = all_logs[-2]
+    long_sleep()
+    clear()
+    short_sleep()
+    print("Here is your Last log\n")
+    print(f"\n{last_log}")
+    long_sleep()
+    print("Here is your Previous log\n")
+    print(f"\n{prev_log}")
+    input('\nPress "Enter" to return to display menu')
 
 
 def exit_progm():
@@ -246,8 +270,9 @@ def display_menu():
         ==========================
         1. Search and display meaning of words
         2. Save new word to worksheet
-        3. Display worksheet log
-        4. Exit Program
+        3. Display list of save words 
+        4. Display last 2 saved logs
+        5. Exit Program
             """)
         menu_choice = input("Choose number between (1-4) to continue:\n")
         if menu_choice == "1":
@@ -255,8 +280,10 @@ def display_menu():
         elif menu_choice == "2":
             save_log()
         elif menu_choice == "3":
-            display_log()
+            display_log_words()
         elif menu_choice == "4":
+            display_last_2_logs()
+        elif menu_choice == "5":
             exit_progm()
         else:
             print("Invalid entry! Enter a number between 1-4: \n")
