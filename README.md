@@ -74,6 +74,10 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
 
 + System Exit - A python module adapted to aborts the execution of the program using the `sys.exit()`.
 
+***
+
+# 5. Testing
+
 
 
 # 7. Deployment
@@ -160,23 +164,18 @@ Clone this repository on Github with the following steps:
 
 + [W3Schools] use for general python reference
 
++ [NPStation](https://www.youtube.com/watch?v=Acojo0G9kD0). Used for general knowldege.
+
 
 ## Code Reference
 
-+ Code used for the spelling checker - (Spelling Checker program using "pyspellchecker") was adapted from [Geeks for Geeks ](https://www.geeksforgeeks.org/spelling-checker-in-python/?ref=gcse)
++ Code used for the spell checker #Line 112 - (Spelling Checker program using "pyspellchecker") was adapted from [Geeks for Geeks ](https://www.geeksforgeeks.org/spelling-checker-in-python/?ref=gcse)
 
-+ Code used for dictionary word meaning error message [Stack Overflow](https://stackoverflow.com/questions/67990505/how-to-get-rid-of-python-dictionary-error-messages)
++ Code used to disable dictionary word meaning error message. #Line 121, adapted from [Stack Overflow](https://stackoverflow.com/questions/67990505/how-to-get-rid-of-python-dictionary-error-messages)
 
-+ []()
++ Code adapted to get the value of the word list column. #Line 153 -[Stack Overflow](https://stackoverflow.com/questions/45134764/getting-all-column-values-from-google-sheet-using-gspread-and-python)
 
-+ []()
-
-+ []()
-
-+ []()
-
-
-
++ Clear terminal module. #Line 53, used sparingly in the program where is needed. [geeksforgeeks](https://www.geeksforgeeks.org/clear-screen-python/#:~:text=You%20can%20simply%20%E2%80%9Ccls%E2%80%9D%20to%20clear%20the%20screen%20in%20windows)
 
 
 ***

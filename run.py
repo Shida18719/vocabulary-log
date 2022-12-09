@@ -237,7 +237,7 @@ def welcome_page():
     long_sleep()
     clear()
     long_sleep()
-    print("""\n       
+    print("""\n
     ***   Welcome To Vocabulary Log  ***
     *==*==*==*==*==*==*==*==**==*==*==*
     """)
