@@ -61,7 +61,7 @@ def title_page():
     """
     Display page title using tprint art
     """
-    tprint("Welcome")
+    tprint("     Welcome")
     tprint("       To")
     tprint("  VOCABULARY")
     tprint("       LOG")
@@ -117,18 +117,17 @@ def search_word():
     else:
         global meaning
         meaning = dictionary.meaning(corrected_word, disable_errors=True)
-        # print("Meaning is: ", meaning)
         types = ["Noun", "Verb", "Adjective", "Adverb"]
         if meaning is None:
-            print("Word not found in dictionary")
+            print("Word not found in dictionary. Please double check!")
         else:
             for meaning_type in types:
                 try:
                     print(f"{meaning_type} {meaning[meaning_type]}")
                 except KeyError:
                     continue
-   
 
+              
 def worksheet_log():
     """
     Update spread sheet, add new row with the new word searched
@@ -138,22 +137,6 @@ def worksheet_log():
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
     vocabulary_worksheet.append_row([word, str(meaning)])
     print("Updating Done. Word Logged! \n")
-
-
-# def log_meaning():
-#     """
-#     Update spread sheet, add new row with the new word searched
-#     by the user from the dictionary
-#     """
-#     # print(meaning)
-#     print("ADDing meaning....")
-#     vocabulary_worksheet = SHEET.worksheet("vocabulary")
-#     # meaning_row = vocabulary_worksheet
-#     # meaning_row.append_row('B4', [meaning["Noun",
-#     #                        "Adjective", "Adverb", "Verb"]])
-#     vocabulary_worksheet.append_row([word, meaning])
-
-#     print("MeaningUpdating Done. Word Logged! \n")
 
 
 def display_log_words():
@@ -188,10 +171,11 @@ def display_last_2_logs():
     clear()
     short_sleep()
     print("Here is your Last log\n")
-    print(f"\n{last_log}")
+    print(f"\n{last_log}\n")
     long_sleep()
-    print("Here is your Previous log\n")
+    print("And here is your Previous log\n")
     print(f"\n{prev_log}")
+    print("Pretty cool....Right?\n")
     input('\nPress "Enter" to return to display menu')
 
 
@@ -234,17 +218,21 @@ def exit_progm():
 
 def welcome_page():
     """
-    Welcome page
+    Welcome page. Display program title and a welcome message
     """
     title_page()
     long_sleep()
     clear()
     long_sleep()
-    print("\n        *** Welcome to Vocabulary Log       ***")
+    print("""\n       
+    ***   Welcome To Vocabulary Log  ***
+    *==*==*==*==*==*==*==*==**==*==*==*
+    """)
     short_sleep()
     print("\nVocabulary Log is an interactive mini version of English "
           "dictionary, where you can get meaning and log new vocabulary.")
-    short_sleep()
+    long_sleep()
+    clear()
     input('\nPress "Enter" to continue\n')
     display_menu()
 
