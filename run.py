@@ -147,8 +147,9 @@ def display_log_words():
     print("fetching your saved vocabulary...\n")
     short_sleep()
     fecth_log = [item for item in vocabulary_sheet.col_values(1) if item]
+    fecth_log.pop(0)
     print(fecth_log)
-    print("\nLooking good..... Keep it up\n")
+    print("\nLooking good..... Keep it up!\n")
     input('\nPress "Enter" to return to display menu')
     display_menu()
 
@@ -170,12 +171,18 @@ def display_last_2_logs():
     long_sleep()
     clear()
     short_sleep()
-    print("Here is your Last log\n")
+    print("""
+    Here is your Last log
+    *==*==*==*==*==*==*==*
+    \n""")
     print(f"\n{last_log}\n")
     long_sleep()
-    print("And here is your Previous log\n")
+    print("""
+    And here is your Previous log
+    *==*==*==*==*==*==*==*==*==*=*
+    \n""")
     print(f"\n{prev_log}")
-    print("Pretty cool....Right?\n")
+    print("\nPretty cool....Right?\n")
     input('\nPress "Enter" to return to display menu')
 
 
@@ -239,7 +246,7 @@ def welcome_page():
 
 def display_menu():
     """
-    Main display menu, on user's choice,
+    Main display menu, with user's choice of input,
     Triggers the chosen function
     """
     while True:
