@@ -22,7 +22,8 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
    + [User Stories]() 
    + [Design Structure]() 
    + [Wireframes]() 
-4. [Technologies]() 
+4. [Technologies]()
+   + [Python Modules/Libraries]() 
 5. [Testing]() 
    + [Code validation]()
    + [Test case]()
@@ -37,6 +38,42 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
 9. [Acknowledgements]() 
 
 ***
+
+
+# 4. Technologies
+
+## Language and Programs used is as follow:
+
++ [Python](https://www.python.org/) programming language was used for this site
+
+
+## Programs Used includes:
+
++ Git - Was used for version control, the Gitpod terminal to commit and push to GitHub.
+
++ [Gitpod](https://gitpod.io/) - The online integrated development environment (IDE) for all coding work.
+
++ [GitHub](https://github.com/) - Was used to store the project code  in a repository.
+
++ [GSpread API](https://developers.google.com/sheets/api) - was used as the API for reading and writing data to the Google Sheet.
+
++ [Google Auth]() - was used to generate the authentication and authorization credentials for the API
+
+
+## Python Modules/Libraries 
+
++ [PyDictionary](https://pypi.org/project/PyDictionary/) - A Dictionary Module for Python, was used to generate meaning of words.
+
++ [SpellChecker](https://pypi.org/project/pyspellchecker/) - A spell checking algorithm with varying functions. The correction 'correction(word)' function was  used for to returns the most probable result for the misspelt word by the user.
+
++ [Python Ascii Art](https://pypi.org/project/art/) - a Python library with varying functions and fonts for converting text into ASCII fancy art. Both the standard and the random font was adapted into a printing function for this program.
+
++ os - A python command used to clear the terminal or shell adapted for clearing the screen after the execution of the program using the `clear()` function, it is called when required.
+
++ [Time](https://docs.python.org/3/library/time.html) - A python module adapted for delaying the execution of the program.  
+
++ System Exit - A python module adapted to aborts the execution of the program using the `sys.exit()`.
+
 
 
 # 7. Deployment
