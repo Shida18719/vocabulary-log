@@ -66,22 +66,22 @@ def title_page():
     tprint("  VOCABULARY")
     tprint("       LOG")
 
-  
+
 def save_log():
     """
     Ask the user if they would like to save the new vocabulary,
     Confirm input. If yes, the worksheet_log(word) function is triggered
     to log word to spreadsheet.
-    If not, validate user input for their log choice, 
+    If not, validate user input for their log choice,
     either save and return to display_menu or exit the program
     """
     save = ""
-    while True: 
+    while True:
         save = input(("\nWould you like to save your new vocabulary?"
                      " (y/n)\n"))
         if save.lower() == "y" or save.lower() == "yes":
             worksheet_log()
-            short_sleep()
+            long_sleep()
             clear()
             input('\nPress "Enter" to return to display menu\n')
             display_menu()
@@ -96,7 +96,7 @@ def save_log():
                 worksheet_log()
                 input('\nPress "Enter" to return to display menu')
             else:
-                print("Log completed")       
+                print("Log completed")
 
 
 def search_word():
@@ -126,24 +126,8 @@ def search_word():
                 try:
                     print(f"{meaning_type} {meaning[meaning_type]}")
                 except KeyError:
-                    continue 
-            # try:
-            #     print("Noun", meaning["Noun"])
-            # except KeyError:
-            #     pass
-            # try:
-            #     print("Verb", meaning["Verb"])
-            # except KeyError:
-            #     pass
-            # try:
-            #     print("Adjective", meaning["Adjective"])
-            # except KeyError:
-            #     pass
-            # try:
-            #     print("Adverb", meaning["Adverb"])
-            # except KeyError:
-            #     pass                 
-                
+                    continue
+   
 
 def worksheet_log():
     """
@@ -152,7 +136,6 @@ def worksheet_log():
     """
     print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
-    # print(meaning)
     vocabulary_worksheet.append_row([word, str(meaning)])
     print("Updating Done. Word Logged! \n")
 
@@ -180,7 +163,6 @@ def display_log_words():
     clear()
     print("fetching your saved vocabulary...\n")
     short_sleep()
-    # fecth_log = vocabulary_sheet.get_all_values()
     fecth_log = [item for item in vocabulary_sheet.col_values(1) if item]
     print(fecth_log)
     print("\nLooking good..... Keep it up\n")
@@ -223,9 +205,13 @@ def exit_progm():
         exit_choice = input('\n"y" = Stay. "n" = Leave:\n')
         if exit_choice.lower() == "n" or exit_choice.lower() == "no":
             clear()
-            print("\nExiting...\n")
+            tprint("Exiting...")
             short_sleep()
             tprint("Thank you", "random")
+            long_sleep()
+            clear()
+            tprint("See you")
+            tprint("       again")
             long_sleep()
             clear()
             tprint("Bye", "random")
@@ -234,11 +220,15 @@ def exit_progm():
             clear()
             sys.exit()
         elif exit_choice.lower() == "y" or exit_choice.lower() == "yes":
+            clear()
+            tprint("    Nice")
+            tprint("      Decision...")
+            long_sleep()
+            input('\nPress "Enter" to return to display menu')
             display_menu()
         else:
             clear()
-            tprint("Nice")
-            tprint("   Decision...")
+            tprint("Exiting...")
             long_sleep()
 
 
@@ -250,10 +240,10 @@ def welcome_page():
     long_sleep()
     clear()
     long_sleep()
-    print("\n *** Welcome to Vocabulary Log ***")
+    print("\n        *** Welcome to Vocabulary Log       ***")
     short_sleep()
     print("\nVocabulary Log is an interactive mini version of English "
-          "dictionary, where you can log new vocabulary words.")
+          "dictionary, where you can get meaning and log new vocabulary.")
     short_sleep()
     input('\nPress "Enter" to continue\n')
     display_menu()
@@ -270,7 +260,7 @@ def display_menu():
         ==========================
         1. Search and display meaning of words
         2. Save new word to worksheet
-        3. Display list of save words 
+        3. Display list of save words
         4. Display last 2 saved logs
         5. Exit Program
             """)
