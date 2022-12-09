@@ -69,9 +69,10 @@ def title_page():
 
 def save_log():
     """
+    Menu function #2,
     Ask the user if they would like to save the new vocabulary,
     Confirm input. If yes, the worksheet_log(word) function is triggered
-    to log word to spreadsheet.
+    to log word into spreadsheet.
     If not, validate user input for their log choice,
     either save and return to display_menu or exit the program
     """
@@ -101,9 +102,10 @@ def save_log():
 
 def search_word():
     """
+    Menu function #1,
     Take user input and display word meaning
-    Search a word in dictionary and print its coincidences
-    Check user misspelt word
+    Search a word in dictionary and print its coincidences by types
+    Check user misspelt word, returns the correct word
     """
     global word
     word = input("\nEnter new word you want to look up: \n")
@@ -127,7 +129,7 @@ def search_word():
                 except KeyError:
                     continue
 
-              
+
 def worksheet_log():
     """
     Update spread sheet, add new row with the new word searched
@@ -141,7 +143,9 @@ def worksheet_log():
 
 def display_log_words():
     """
-    Get and prints saved vocabulary from the spreadsheet back the to user,
+    Menu function #3,
+    Get and prints lists of saved vocabulary words
+    from spreadsheet's words column back the to user
     """
     clear()
     print("fetching your saved vocabulary...\n")
@@ -156,7 +160,9 @@ def display_log_words():
 
 def display_last_2_logs():
     """
-    Get and prints last 2 saved log from the spreadsheet back the to user,
+    Menu function #4,
+    Fetch and prints last 2 saved words including word meaning,
+    from the spreadsheet back the to user
     """
     clear()
     print("fetching your last 2 saved vocabulary logs...\n")
@@ -188,7 +194,7 @@ def display_last_2_logs():
 
 def exit_progm():
     """
-    Function #4 to allow user exit program, with a validation of input
+    Menu function #5, allow user exit program, with a validation of input
     """
     while True:
         clear()
