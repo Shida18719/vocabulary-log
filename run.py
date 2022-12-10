@@ -115,7 +115,9 @@ def search_word():
         print("corrected_word: ", corrected_word)
 
     if word == "":
-        sys.exit()
+        print("\nOops..... Something went wrong!\n")
+        input('\nPress "Enter" to return to display menu')
+        display_menu()
     else:
         global meaning
         meaning = dictionary.meaning(corrected_word, disable_errors=True)
