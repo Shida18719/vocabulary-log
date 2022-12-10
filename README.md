@@ -78,6 +78,20 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
 
 # 5. Testing
 
+## Code Validator Testing
+
+### Pep8
++ No errors or warnings were returned when passing through the [Pep8](https://pep8ci.herokuapp.com/#)
+
+## Manual Testing
+
+This program was tested manually with the following:
+
++ It was pass through PEP8 linter with all clear - "Results:
+All clear, no errors found".
+
++ This project was also tested on my Gitpod local terminal with the following output:
+
 
 
 # 7. Deployment
@@ -234,10 +248,3 @@ You must then create a _Config Var_ called `PORT`. Set this to `8000`
 If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
 Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
