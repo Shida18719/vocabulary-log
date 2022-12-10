@@ -164,18 +164,21 @@ Clone this repository on Github with the following steps:
 
 + [W3Schools] use for general python reference
 
-+ [NPStation](https://www.youtube.com/watch?v=Acojo0G9kD0). Used for general knowldege.
++ [NPStation](https://www.youtube.com/watch?v=Acojo0G9kD0). Used for general knowldege and idea.
 
++ [PyDictionary](https://pypi.org/project/PyDictionary/). Utilised for PyDictionary usage 
+
++ [ASCII Art Library For Python](https://pypi.org/project/art/). Utilised for creating ascii art in python.
 
 ## Code Reference
 
-+ Code used for the spell checker #Line 112 - (Spelling Checker program using "pyspellchecker") was adapted from [Geeks for Geeks ](https://www.geeksforgeeks.org/spelling-checker-in-python/?ref=gcse)
++ Code used for the spell checker run.py #Line 112 - (Spelling Checker program using "pyspellchecker") was adapted from [Geeks for Geeks ](https://www.geeksforgeeks.org/spelling-checker-in-python/?ref=gcse)
 
-+ Code used to disable dictionary word meaning error message. #Line 121, adapted from [Stack Overflow](https://stackoverflow.com/questions/67990505/how-to-get-rid-of-python-dictionary-error-messages)
++ Code used to disable dictionary word meaning error message. run.py  #Line 121, adapted from [Stack Overflow](https://stackoverflow.com/questions/67990505/how-to-get-rid-of-python-dictionary-error-messages)
 
-+ Code adapted to get the value of the word list column. #Line 153 -[Stack Overflow](https://stackoverflow.com/questions/45134764/getting-all-column-values-from-google-sheet-using-gspread-and-python)
++ Code adapted to get the value of the word list column. run.py #Line 153 -[Stack Overflow](https://stackoverflow.com/questions/45134764/getting-all-column-values-from-google-sheet-using-gspread-and-python)
 
-+ Clear terminal module. #Line 53, used sparingly in the program where is needed. [geeksforgeeks](https://www.geeksforgeeks.org/clear-screen-python/#:~:text=You%20can%20simply%20%E2%80%9Ccls%E2%80%9D%20to%20clear%20the%20screen%20in%20windows)
++ Clear terminal module. run.py #Line 53, used sparingly in the program where is needed. [geeksforgeeks](https://www.geeksforgeeks.org/clear-screen-python/#:~:text=You%20can%20simply%20%E2%80%9Ccls%E2%80%9D%20to%20clear%20the%20screen%20in%20windows)
 
 
 ***
