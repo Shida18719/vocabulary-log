@@ -112,7 +112,7 @@ def search_word():
     corrected_word = spell.correction(word)
 
     if word is not corrected_word:
-        print("corrected_word: ", corrected_word)
+        print("corrected word: ", corrected_word)
 
     if word == "":
         print("\nOops..... Something went wrong!\n")
@@ -267,7 +267,7 @@ def display_menu():
         4. Display last 2 saved logs
         5. Exit Program
             """)
-        menu_choice = input("Choose number between (1-4) to continue:\n")
+        menu_choice = input("Choose number between (1-5) to continue:\n")
         if menu_choice == "1":
             search_word()
         elif menu_choice == "2":
@@ -279,7 +279,7 @@ def display_menu():
         elif menu_choice == "5":
             exit_progm()
         else:
-            print("Invalid entry! Enter a number between 1-4: \n")
+            print("Invalid entry! Enter a number between 1-5: \n")
             long_sleep()
 
 
