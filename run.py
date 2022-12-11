@@ -97,6 +97,8 @@ def save_log():
                 print("\nSaving vocabulary...")
                 worksheet_log()
                 input('\nPress "Enter" to return to display menu')
+                clear()
+                display_menu()
             else:
                 print("Invalid input! Please check and try again.")
                 print(user_choice)
@@ -241,8 +243,6 @@ def exit_progm():
             short_sleep()
             input('\nPress "Enter" to continue')
             print(exit_choice)
-            # tprint("Exiting...")
-            # long_sleep()
 
 
 def welcome_page():
