@@ -75,6 +75,7 @@ def save_log():
     to log word into spreadsheet.
     If not, validate user input for their log choice,
     either save and return to display_menu or exit the program
+    Otherwise, display invalid input, error message
     """
     save = ""
     while True:
@@ -97,7 +98,7 @@ def save_log():
                 worksheet_log()
                 input('\nPress "Enter" to return to display menu')
             else:
-                print("Invalid input. Try again")
+                print("Invalid input! Please check and try again.")
                 print(user_choice)
         else:
             print("Invalid entry! Sorry... we have to start again.")
