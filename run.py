@@ -74,7 +74,7 @@ def save_log():
     Confirm input. If yes, the worksheet_log(word) function is triggered
     to log word into spreadsheet.
     If not, validate user input for their log choice,
-    either save and return to save log or exit the program
+    either save and return to display menu or exit the program
     Otherwise, display invalid input, error message
     """
     save = ""
@@ -115,6 +115,7 @@ def search_word():
     Take user input and display word meaning
     Search a word in dictionary and print its coincidences by types
     Check user misspelt word, returns the correct word
+    Disables PyDictionary errors message
     """
     global word
     word = input("\nEnter new word you want to look up: \n")
