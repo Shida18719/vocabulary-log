@@ -203,7 +203,9 @@ def display_last_2_logs():
 
 def exit_progm():
     """
-    Menu function #5, allow user exit program, with a validation of input
+    Menu function #5, allow user exit program, with a validation of input.
+    If wrong input, display invalid entry, press enter to continue,
+    go back to exit choice
     """
     while True:
         clear()
@@ -233,9 +235,12 @@ def exit_progm():
             input('\nPress "Enter" to return to display menu')
             display_menu()
         else:
-            clear()
-            tprint("Exiting...")
-            long_sleep()
+            print("Invalid entry! Please check.")
+            short_sleep()
+            input('\nPress "Enter" to continue')
+            print(exit_choice)
+            # tprint("Exiting...")
+            # long_sleep()
 
 
 def welcome_page():
