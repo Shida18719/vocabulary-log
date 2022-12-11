@@ -74,7 +74,7 @@ def save_log():
     Confirm input. If yes, the worksheet_log(word) function is triggered
     to log word into spreadsheet.
     If not, validate user input for their log choice,
-    either save and return to display_menu or exit the program
+    either save and return to save log or exit the program
     Otherwise, display invalid input, error message
     """
     save = ""
@@ -90,7 +90,7 @@ def save_log():
         elif save.lower() == "n" or save.lower() == "no":
             print("\nAre you sure? You don't want to save the new vocabulary?")
             user_choice = input('\n"y" = Quit and no word saved.'
-                                ' "n" = Save and return to display menu.\n')                    
+                                ' "n" = Save and return to display menu.\n')
             if user_choice.lower() == "y" or user_choice.lower() == "yes":
                 sys.exit()
             elif user_choice.lower() == "n" or user_choice.lower() == "no":
@@ -101,10 +101,10 @@ def save_log():
                 print("Invalid input! Please check and try again.")
                 print(user_choice)
         else:
-            print("Invalid entry! Sorry... we have to start again.")
+            print("Invalid entry! Sorry... we have to go again.")
             short_sleep()
-            input('\nPress "Enter" to return to display menu')
-            display_menu() 
+            input('\nPress "Enter" to continue')
+            save_log()
 
 
 def search_word():
@@ -141,13 +141,15 @@ def search_word():
 
 def worksheet_log():
     """
-    Update spread sheet, add new row with the new word searched
-    by the user
+    Update spread sheet, add new row with the new word and meaning of word
+    looked up by the user.
     """
     print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
     vocabulary_worksheet.append_row([word, str(meaning)])
-    print("Updating Done. Word Logged! \n")
+    long_sleep()
+    tprint("Updating Done.")
+    tprint("        Word Logged!")
 
 
 def display_log_words():
