@@ -89,7 +89,7 @@ def save_log():
         elif save.lower() == "n" or save.lower() == "no":
             print("\nAre you sure? You don't want to save the new vocabulary?")
             user_choice = input('\n"y" = Quit and no word saved.'
-                                ' "n" = Save and return to Main Menu.\n')
+                                ' "n" = Save and return to display menu.\n')                    
             if user_choice.lower() == "y" or user_choice.lower() == "yes":
                 sys.exit()
             elif user_choice.lower() == "n" or user_choice.lower() == "no":
@@ -97,7 +97,13 @@ def save_log():
                 worksheet_log()
                 input('\nPress "Enter" to return to display menu')
             else:
-                print("Log completed")
+                print("Invalid input. Try again")
+                print(user_choice)
+        else:
+            print("Invalid entry! Sorry... we have to start again.")
+            short_sleep()
+            input('\nPress "Enter" to return to display menu')
+            display_menu() 
 
 
 def search_word():
