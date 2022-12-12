@@ -119,15 +119,15 @@ def search_word():
     """
     global word
     word = input("\nEnter new word you want to look up: \n")
+    # word = word.strip(" ")
     corrected_word = spell.correction(word)
 
     if word is not corrected_word:
-        print("corrected word: ", corrected_word)
+        print("corrected word:", corrected_word)
 
-    if word == "":
+    if word.count(' ') > 0:
         print("\nOops..... Something went wrong!\n")
         input('\nPress "Enter" to return to display menu')
-        display_menu()
     else:
         global meaning
         meaning = dictionary.meaning(corrected_word, disable_errors=True)
