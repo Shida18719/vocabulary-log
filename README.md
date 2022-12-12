@@ -111,11 +111,38 @@ The following tools were used in the development of this project:
 
 ## Fixed bugs
 
+The following known bugs where caught and fixed during the development stage of this program.
 
++ `menu_choice = input(int("Choose number between (1-5) to continue:\n"))` run.py Line #285, initialy didn't catch the error message.
+
+  + This was fixed by removing the interger from the input and converting the menu_choice options to string.
+
++ Working with PyDictionary, the below error was thrown after every word defined from the dictionary. -  
+"Error: The Following Error occured: list index out of range"
+
+   + This was fixed using the (`disable_errors=True`) method, inside the meaning variable parenthesis.
+   + Code Reference adapted from [Stack Overflow](https://stackoverflow.com/questions/52563826/python-how-to-get-rid-of-pydictionary-error-messages)
+   `meaning = dictionary.meaning(corrected_word, disable_errors=True)` run.py Line #133.
+
++ Used `break` with an if statement, gave the following error:
+"SyntaxError: 'break' outside loop"
+
+   +  This was fixed using `sys.exit()` run.py Line #95.
+   +  Code Reference adapted from [Stack Overflow](https://stackoverflow.com/questions/2462566/python-break-outside-loop)
+
+
++ Error with logging word meaning in to the spreadsheet. 
+`vocabulary_worksheet.append_row([word, meaning])`
+   + It gave the following error: "AttributeError: 'string' list object has no attribute 'value'"
+
+   + This was fixed by passing the meaning into a string;
+   `vocabulary_worksheet.append_row([word, str(meaning)])` run.py Line #152.
 
 
 ## UnKnown Bugs
 
+
+***
 
 # 7. Deployment
 
