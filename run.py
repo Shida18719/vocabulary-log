@@ -119,7 +119,6 @@ def search_word():
     """
     global word
     word = input("\nEnter new word you want to look up: \n")
-    # word = word.strip(" ")
     corrected_word = spell.correction(word)
 
     if word is not corrected_word:
