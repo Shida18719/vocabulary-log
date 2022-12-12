@@ -60,6 +60,19 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
   + Display list of search words pulled from the google spreadsheet
   + Display last two words and meaning logged by the user, pulled from the google spreadsheet
 
+# 2. Features
+
+
+## Future Features
+***
+
+The following features can be added at a later date in order to improve user experience: 
+
++ Currently, vocabulary log was only program to retrieve words based on a coincedence of the following figure of speech: "Noun", "Adjective", "Verb" and "Adverb". Which excludes "Synonymn", "Antonymn" and word "translation" to other languages. These can be included to give user varying experience.
+
++ Refactor code to specify columns for individual figure of speech.
+
++ Adapt a multi-user functionality via personalised sheet
 
 
 
