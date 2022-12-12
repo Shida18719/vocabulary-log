@@ -1,7 +1,7 @@
 # Vocabulary Log
 
 
-Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interface, which takes user input in words, define the meaning of the word in English base on coincidence of either a "Noun", "Verb", "Adjective"and "Adverb" then display the meaning to user. User can then Log their new Vocabulary Word in the Google sheet.
+Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interface, which takes user input in words, define the meaning of the word in English base on coincidence of either a "Noun", "Verb", "Adjective"and "Adverb" then display the meaning to user. User can then choose to Log their new Vocabulary Word in the Google sheet.
 
 
 [View the live site here](https://shida18719.github.io/)
@@ -12,6 +12,8 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
 
 
 ***
+
+# Table of Contents
 
 1. [Overview]()
 2. [Features]()
@@ -37,6 +39,28 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
 9. [Acknowledgements]() 
 
 ***
+
+# 1. Overview
+
+This project is a concept which is aim at helping the user to learn the meaning of new word, in so doing increasing vocabulary usage and able to save their new vocabulary words.
+
+As a mum, and someone who love helping children learn. I took the time to create tones of hand written words and meaning "flash cards" to help my son improve his vocabulary daily, but soon realised how much he let this "cards" fly everywhere after use. As such I decided to create a fun way of learning and improving vocabulary and also save, retrive and access the words for future reference.
+
+An easier method is needed to learn faster and also to help retain the new words and their meaning in the user’s memory. Vocabulary Log aim to achieve this by providing a menu based program where the user can search for the meaning of new words, log the result in a database (Google Sheet), display the meaning of the new word on the screen base on coincidence of "figure of speech", display list of all words and display the meaning of the last two words stored in the database for practicing. There may be occasion where the user might have an idea of a word but not sure of the spelling. The program have an in-built spell checker to display probable words. This assists the user by not only saving time but also making the learning experience enjoyable. With the Vocabulary Log the user can test themselves periodically and have a record of their achievement.
+
+Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's presently for one user, but can be develop for a multi-user program moving forward.  
+
++ Key Information for this program:
+
+  + Choose from menu display option
+  + Enter word to look up meaning
+  + Display word and meaning base on coincednce of "figure of speech" using PyDictionary
+  + Provide a system for spell checking and prividing probable correct word  
+  + Log searched word and meaning via google sheet API
+  + Display list of search words pulled from the google spreadsheet
+  + Display last two words and meaning logged by the user, pulled from the google spreadsheet
+
+
 
 
 # 4. Technologies
