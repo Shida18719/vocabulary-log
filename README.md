@@ -20,7 +20,7 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
    + [Existing Features]()  
    + [Future Features]() 
 3. [User Experience]()
-   + [Site Goals]()  
+   + [Client Goals]()  
    + [User Stories]() 
    + [Design Structure]() 
    + [Wireframes]() 
@@ -59,8 +59,14 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
   + Log searched word and meaning via google sheet API
   + Display list of search words pulled from the google spreadsheet
   + Display last two words and meaning logged by the user, pulled from the google spreadsheet
+  + Provide a reliable error-handling program
+  + Provide user with clear instructions 
 
 # 2. Features
+
+## Existing Features
+***
+
 
 
 ## Future Features
@@ -73,6 +79,59 @@ The following features can be added at a later date in order to improve user exp
 + Refactor code to specify columns for individual figure of speech.
 
 + Adapt a multi-user functionality via personalised sheet
+
+
+# 3. User Experience
+
+## Client Goals
+
++ Create a program where the user can search for the meaning of a word.
+
++ Create a program where the searched word and meaning will be display on screen.
+
++ Create a program where the user can log the searched word and meaning.
+
++ Create a program to assist the user with a probable correct word spelling if the user is unsure.
+
++ Create a program to display on screen the lists of words logged by the user.
+
++ Create a program to display on screen the last two words and meaning logged by the user.
+
+
+## User Stories
+
++ First Time Visitor Goal:
+  + I want to understand how to navigate the program easily
+  
+  + I want to learn the meaning of new words.
+
+  + I want the word and meaning to be displayed on screen
+
+  + I want to be able to log the meaning of the new words I have learned.
+
+  + I want the program to assist me with the word spelling if I am unsure.
+
+  + I want to be able to view the lists of my save words.
+
+  + I want to be able to display on screen the words and meaning of my last two log.
+
+  + I want to be able to easily exit the program
+
+
++ Returning Visitor Goal:
+
+  + I want to continue learning new words and their meaning.
+
+  + I want to see a log of my searched words and their meaning.
+
+  + I want to test myself to see that I retained the meaning of previous words searched.
+
+
++ Frequent Visitor Goals:
+
+  + I want my English vocabulary to have improved.
+
+  + I want to learn new words and meaning faster and retain them in memory for easy recall.
 
 
 
