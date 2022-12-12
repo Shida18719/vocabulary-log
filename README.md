@@ -26,9 +26,8 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
    + [Python Modules/Libraries]() 
 5. [Testing]() 
    + [Code validation]()
-   + [Test case]()
-6. [Bugs]()
    + [Manual Testing]()
+6. [Bugs]()
    + [Fixed bugs]()
    + [Unknown bugs]()
 7. [Deployment]() 
@@ -78,12 +77,13 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
 
 # 5. Testing
 
-## Code Validator Testing
++ ## Code Validator Testing
 
 ### Pep8
 + No errors or warnings were returned when passing through the [Pep8](https://pep8ci.herokuapp.com/#)
 
-## Manual Testing
+
++ ## Manual Testing
 
 This program was tested manually with the following:
 
@@ -93,6 +93,28 @@ All clear, no errors found".
 + This project was also tested on my Gitpod local terminal with the following output:
 Test case can be viewed here [<< Manual Testing](test.md)
 
+
++ ## Tools
+
+The following tools were used in the development of this project:
+
++ [GitPod](https://gitpod.io/)
++ [GitHub](https://github.com/)
++ [Heroku](https://www.heroku.com/)
++ [Python Tutor](https://pythontutor.com/visualize.html#mode=edit)
++ [Google Sheets](https://www.google.co.uk/sheets/about/)
++ [Google Drive](https://www.google.co.uk/intl/en-GB/drive/)
+
+***
+
+# 6. Bugs
+
+## Fixed bugs
+
+
+
+
+## UnKnown Bugs
 
 
 # 7. Deployment
