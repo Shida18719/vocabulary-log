@@ -67,6 +67,39 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
 ## Existing Features
 ***
 
+## Welcome Page
+
+![Display Menu](./READMEimages/-img.png)
+
+## Display Menu
+
+![Display Menu](./READMEimages/display-menu-img.png)
+
+Featured on the display menu is a list of options that triggers different aspect of the program
+***
+
+
+## Display Menu Input Validation
+
+![Display Menu Valid Entry](./READMEimages/menu-valid-entry-img.png)
+***
+
+![Display Menu Invalid Entry](./READMEimages/menu-invalid-entry-img.png)
+***
+
+![Display Menu Word Look Up](./READMEimages/look-up-word-meaning-img.png)
+***
+
+![Display Menu- Option 2 Invalid Entry](./READMEimages/option-2-invalid-entry-img.png)
+
+
++ Display Menu Input Validation is the user Input field which takes number as the first input. 
+  + User is then prompted to enter the new word they will like to look up.  
+  + An error message is displayed under the input field if the user enters the wrong value. 
+  + The user will be prompted to press enter to continue.
+
+***
+
 
 
 ## Future Features
