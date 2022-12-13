@@ -29,9 +29,9 @@ Below are the manual test case which was performed on function and to check for 
   </tr>
   <tr>
     <td>Search word - option 1</td>
-    <td>"1", "t", "ghhgt", "f5rd", "8754", ""</td>
+    <td>"1", "t", "ghhgt", "f5rd", "8754", " ", "raiin" "t33th"</td>
     <td>Prompt user input word, display word meaning, returns most probable corrected word with meaning for misspelt word, display words meaning and it coincidences by types of "figure of speech". Display word not found error message and returns display menu. Handles and disables PyDictionary errors message</td>
-    <td>Function runs and loads as expected</td>
+    <td>Function runs and loads as expected, with exception of a single character being converted to i</td>
     <td>pass</td>
     </tr>
   <tr>
