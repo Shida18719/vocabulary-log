@@ -55,7 +55,7 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
   + Choose from menu display option
   + Enter word to look up meaning
   + Display word and meaning base on coincednce of "figure of speech" using PyDictionary
-  + Provide a system for spell checking and prividing probable correct word  
+  + Provide a system for spell checking and providing probable correct word  
   + Log searched word and meaning via google sheet API
   + Display list of search words pulled from the google spreadsheet
   + Display last two words and meaning logged by the user, pulled from the google spreadsheet
@@ -132,6 +132,19 @@ The following features can be added at a later date in order to improve user exp
   + I want my English vocabulary to have improved.
 
   + I want to learn new words and meaning faster and retain them in memory for easy recall.
+
+
+## Design Structure
+***
+This program was design with a simplistic strucrure, with clear and easy to follow instruction, that will allow user easily navigate across the program.
+
+The `tprint ascii art` uses both the standard and the random print to create an environment for fun way of learning, engaging the user and keeping user informed.
+
+
+
+## Wireframes
+
+A wireframe is not required due to the nature of the program using the terminal shell to display out.
 
 
 
@@ -235,8 +248,9 @@ The following known bugs where caught and fixed during the development stage of 
    `vocabulary_worksheet.append_row([word, str(meaning)])` run.py Line #152.
 
 
-## UnKnown Bugs
 
+## UnKnown Bugs
+The only unknown bug is a single character been converted to "i" during the test carried out on the `search_word()` #Line 112
 
 ***
 
