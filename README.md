@@ -69,7 +69,10 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
 
 ## Welcome Page
 
-![Display Menu](./READMEimages/-img.png)
+![Welcome Page](./READMEimages/welcome-page-img.png)
+
+The welcome page is displayed as soon as the program start to run.
+***
 
 ## Display Menu
 
@@ -79,29 +82,35 @@ Featured on the display menu is a list of options that triggers different aspect
 ***
 
 
-## Display Menu Input Validation
-
 ### Option 1
+
+Option 1 takes a user input of word the user will like to look up for the meaning.
 
 ### Display Menu Valid Entry
 
 ![Display Menu Valid Entry](./READMEimages/menu-valid-entry-img.png)
 ***
 
-### Display Menu Invalid Entry
-
-![Display Menu Invalid Entry](./READMEimages/menu-invalid-entry-img.png)
-***
-
 ### Display Menu Word Look Up
 
 ![Display Menu Word Look Up](./READMEimages/look-up-word-meaning-img.png)
 
+User's input word is defined based on coincidence of figure of speech.
+***
 
-+ Display Menu Input Validation is the user Input field which takes number as the first input. 
-  + User is then prompted to enter the new word they will like to look up.  
-  + An error message is displayed under the input field if the user enters the wrong value. 
+## Display Menu Input Validation
+
+### Display Menu Invalid Entry
+
+![Display Menu Invalid Entry](./READMEimages/menu-invalid-entry-img.png)
+
+
++ Display Menu Input Validation is to test the user Input which takes number as the first input. 
+
+  + User is prompted to enter the new word they will like to look up.  
+  + An error message is displayed under the input area if the user enters the wrong value. 
   + The user will be prompted to display menu.
+  + If user enters a valid input, user will be prompted to enter the word they will like to look up, that will be get defined.
 ***
 
 ### Option 2
@@ -109,12 +118,18 @@ Featured on the display menu is a list of options that triggers different aspect
 ### Display Menu- Option 2 Invalid Entry
 
 ![Display Menu- Option 2 Invalid Entry](./READMEimages/option-2-invalid-entry-img.png)
+
+Option 2 takes a "yes" or "no" input from the user, wrong input returns an error message. Valid input saves the word to google spreadsheet via API if user chooses to save the word. 
 ***
 
 ### Updating Log To Google Sheet
 
 ![Updating Log To Google Sheet](./READMEimages/updating-log-img.png)
+
+Word and it's definition is been saved to google sheet.  
 ***
+
+## Google Sheet Log
 
 
 
