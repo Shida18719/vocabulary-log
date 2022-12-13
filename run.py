@@ -123,10 +123,14 @@ def search_word():
 
     if word is not corrected_word:
         print("corrected word:", corrected_word)
+        if len(word) < 2:
+            print("\nOOps....Please try again!\n")   
 
-    if word.count(' ') > 0:
-        print("\nOops..... Something went wrong!\n")
-        input('\nPress "Enter" to return to display menu')
+        if word.count(' ') > 0:
+            print("\nOops..... Something went wrong!\n")
+        # input('\nPress "Enter" to return to display menu')
+    # if len(word) < 2:
+    #     print("\nOOps....Please try again!\n")
     else:
         global meaning
         meaning = dictionary.meaning(corrected_word, disable_errors=True)
