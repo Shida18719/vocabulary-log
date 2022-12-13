@@ -81,23 +81,39 @@ Featured on the display menu is a list of options that triggers different aspect
 
 ## Display Menu Input Validation
 
+### Option 1
+
+### Display Menu Valid Entry
+
 ![Display Menu Valid Entry](./READMEimages/menu-valid-entry-img.png)
 ***
+
+### Display Menu Invalid Entry
 
 ![Display Menu Invalid Entry](./READMEimages/menu-invalid-entry-img.png)
 ***
 
-![Display Menu Word Look Up](./READMEimages/look-up-word-meaning-img.png)
-***
+### Display Menu Word Look Up
 
-![Display Menu- Option 2 Invalid Entry](./READMEimages/option-2-invalid-entry-img.png)
+![Display Menu Word Look Up](./READMEimages/look-up-word-meaning-img.png)
 
 
 + Display Menu Input Validation is the user Input field which takes number as the first input. 
   + User is then prompted to enter the new word they will like to look up.  
   + An error message is displayed under the input field if the user enters the wrong value. 
-  + The user will be prompted to press enter to continue.
+  + The user will be prompted to display menu.
+***
 
+### Option 2
+
+### Display Menu- Option 2 Invalid Entry
+
+![Display Menu- Option 2 Invalid Entry](./READMEimages/option-2-invalid-entry-img.png)
+***
+
+### Updating Log To Google Sheet
+
+![Updating Log To Google Sheet](./READMEimages/updating-log-img.png)
 ***
 
 
