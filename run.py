@@ -266,6 +266,12 @@ def welcome_page():
           "dictionary, where you can get meaning and log new vocabulary.")
     long_sleep()
     clear()
+    print("""\nHow to use Vocabulary Log: Select an option from display menu,\n
+    preferable starting from "1" to begin with. Press the "Enter"
+    key after your input\n
+    """)
+    long_sleep()
+    clear()
     input('\nPress "Enter" to continue\n')
     display_menu()
 
@@ -281,7 +287,7 @@ def display_menu():
         ==========================
         1. Search and display meaning of words
         2. Save new word to worksheet
-        3. Display list of save words
+        3. Display list of saved words
         4. Display last 2 saved logs
         5. Exit Program
             """)
