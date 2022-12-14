@@ -67,9 +67,9 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
 ## Existing Features
 ***
 
-## Welcome and Introductory Page
+## Title and Introductory Welcome Page
 
-![Welcome Page](./READMEimages/welcome-page-img.png)
+![Title Page](./READMEimages/welcome-page-img.png)
 
 ![Introductory Page](./READMEimages/welcome-intro-page-img.png)
 
@@ -244,6 +244,9 @@ The `tprint ascii art` uses both the standard and the random print to create an 
 
 A wireframe is not required due to the nature of the program using the terminal shell to display out.
 
+However, I created a basic flow chart that represent a diagrammatic visual presentation flow of the program.
+
+![Flowchart](./READMEimages/flow-chart-image.png)
 
 
 # 4. Technologies
@@ -311,6 +314,7 @@ The following tools were used in the development of this project:
 + [Python Tutor](https://pythontutor.com/visualize.html#mode=edit)
 + [Google Sheets](https://www.google.co.uk/sheets/about/)
 + [Google Drive](https://www.google.co.uk/intl/en-GB/drive/)
++ [Flowchart](https://www.smartdraw.com/flowchart/)
 
 ***
 
