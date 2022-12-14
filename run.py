@@ -92,7 +92,7 @@ def save_log():
             user_choice = input('\n"y" = Quit and no word saved.'
                                 ' "n" = Save and return to display menu.\n')
             if user_choice.lower() == "y" or user_choice.lower() == "yes":
-                sys.exit()
+                exit_progm()
             elif user_choice.lower() == "n" or user_choice.lower() == "no":
                 print("\nSaving vocabulary...")
                 worksheet_log()
