@@ -67,9 +67,11 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
 ## Existing Features
 ***
 
-## Welcome Page
+## Welcome and Introductory Page
 
 ![Welcome Page](./READMEimages/welcome-page-img.png)
+
+![Introductory Page](./READMEimages/welcome-intro-page-img.png)
 
 The welcome page is displayed as soon as the program start to run.
 ***
@@ -82,7 +84,7 @@ Featured on the display menu is a list of options that triggers different aspect
 ***
 
 
-### Option 1
+## Option 1 - Define Word Meaning
 
 Option 1 takes a user input of word the user will like to look up for the meaning.
 
@@ -110,10 +112,10 @@ User's input word is defined based on coincidence of figure of speech.
   + User is prompted to enter the new word they will like to look up.  
   + An error message is displayed under the input area if the user enters the wrong value. 
   + The user will be prompted to display menu.
-  + If user enters a valid input, user will be prompted to enter the word they will like to look up, that will be get defined.
+  + If user enters a valid input, user will be prompted to enter the word they will like to look up, and get defined.
 ***
 
-### Option 2
+## Option 2 - Save New Word To Google Sheet
 
 ### Display Menu- Option 2 Invalid Entry
 
@@ -131,7 +133,39 @@ Word and it's definition is been saved to google sheet.
 
 ## Google Sheet Log
 
+![Google Sheet Log](./READMEimages/google-sheet-vocabulary-log-img.png)
 
+Every words saved by the user is append to the next available new row of the google sheet.
+***
+
+## Option 3 - Retrives and Display Lists of Saved Words From Google Sheet
+
+![Retrives Lists of Saved Words](./READMEimages/display-lists-of-saved-words-img.png)
+
+Retrieve and display lists of saved words.
+***
+
+## Option 4 - Retrives and Display The Last 2 Saved Words From Google Sheet
+
+![Retrives The Last 2 Saved Words](./READMEimages/last-2-saved-log-img.png)
+
+
++ This function allows user to retrieve and display the last 2 saved words.
+
+![Google Sheet Last 2 Saved Log](./READMEimages/google-sheet-last-2-log-img.png)
+***
+
+## Option 5 - Exit Program
+
+The last option will allow the user to safely exit the program after a confirmatory option is selected. An exiting, thank you and a bye bye message art print is randomly generated for the fun part of learning.
+
+### Exit Option
+
+![Exit Confirmatory Option](./READMEimages/exit-option-img.png)
+
++ This is displayed when a user select "n" to leave the program
+
+![Exit](./READMEimages/exiting-prog-img.png)
 
 ## Future Features
 ***
