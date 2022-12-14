@@ -124,8 +124,7 @@ def search_word():
     if word is not corrected_word:
         print("corrected word:", corrected_word)
         if len(word) < 2:
-            print("\nOOps....Please try again!\n")   
-
+            print("\nOOps....Please try again!\n")
         if word.count(' ') > 0:
             print("\nOops..... Something went wrong!\n")
         # input('\nPress "Enter" to return to display menu')
@@ -262,13 +261,14 @@ def welcome_page():
     *==*==*==*==*==*==*==*==**==*==*==*
     """)
     short_sleep()
-    print("\nVocabulary Log is an interactive mini version of English "
-          "dictionary, where you can get meaning and log new vocabulary.")
+    print("""\nVocabulary Log is an interactive mini version of
+    the English Dictionary,\n
+    where you can get meaning and log new vocabulary.\n""")
     long_sleep()
-    clear()
-    print("""\nHow to use Vocabulary Log: Select an option from display menu,\n
-    preferable starting from "1" to begin with. Press the "Enter"
-    key after your input\n
+    print("""\nHow to use Vocabulary Log:\n
+    Select an option from display menu,\n
+    preferable starting from "1" to begin with.\n
+    Press the "Enter" key after your input\n
     """)
     long_sleep()
     clear()
