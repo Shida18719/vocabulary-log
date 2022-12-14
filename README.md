@@ -246,6 +246,8 @@ A wireframe is not required due to the nature of the program using the terminal 
 
 However, I created a basic flow chart that represent a diagrammatic visual presentation flow of the program.
 
+## Flow Chart
+
 ![Flowchart](./READMEimages/flow-chart-image.png)
 
 
