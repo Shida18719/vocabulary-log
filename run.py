@@ -115,6 +115,7 @@ def search_word():
     Take user input and display word meaning
     Search a word in dictionary and print its coincidences by types
     Check user misspelt word, returns the correct word
+    Check input of empty or whitespace
     Disables PyDictionary errors message
     """
     global word
