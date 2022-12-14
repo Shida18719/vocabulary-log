@@ -350,6 +350,10 @@ The following known bugs where caught and fixed during the development stage of 
 ## UnKnown Bugs
 The only unknown bug is a single character been converted to "i" during the test carried out on the `search_word()` #Line 112
 
+Using the function to check if user input a single character other than: (Example: "i" , "y", "a" etc) that has a meaning defined from the dictionary.
+
+![Search Word Function Test](./READMEimages/bug-test-search-word.png)
+
 ***
 
 # 7. Deployment
