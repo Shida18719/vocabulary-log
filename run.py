@@ -144,6 +144,7 @@ def worksheet_log():
     """
     Update spread sheet, add new row with the new word and meaning of word
     looked up by the user.
+    tprint prints updating message
     """
     print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
@@ -175,6 +176,7 @@ def display_last_2_logs():
     Menu function #4,
     Fetch and prints last 2 saved words including word meaning,
     from the spreadsheet back the to user
+    Delay prints and clear screen at intervals
     """
     clear()
     print("fetching your last 2 saved vocabulary logs...\n")
@@ -209,6 +211,7 @@ def exit_progm():
     Menu function #5, allow user exit program, with a validation of input.
     If wrong input, display invalid entry, press enter to continue,
     go back to exit choice
+    tprint prints messages in delay print
     """
     while True:
         clear()
