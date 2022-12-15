@@ -250,6 +250,7 @@ def exit_progm():
 def welcome_page():
     """
     Welcome page. Display program title and a welcome message
+    Triggers display menu function to start the program
     """
     title_page()
     long_sleep()
