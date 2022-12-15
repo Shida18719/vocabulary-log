@@ -4,11 +4,7 @@
 Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interface, which takes user input in words, define the meaning of the word in English base on coincidence of either a "Noun", "Verb", "Adjective"and "Adverb" then display the meaning to user. User can then choose to Log their new Vocabulary Word in the Google sheet.
 
 
-[View the live site here](https://shida18719.github.io/)
-
-
-
-![VOCABULARY LOG](./READMEimages/imiresponsive-image.png) 
+[View the live site here](https://vocabulary-log.herokuapp.com/)
 
 
 ***
