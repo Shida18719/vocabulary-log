@@ -167,6 +167,12 @@ The last option will allow the user to safely exit the program after a confirmat
 
 ![Exit](./READMEimages/exiting-prog-img.png)
 
+
+## Data Model
+
+
+
+
 ## Future Features
 ***
 
