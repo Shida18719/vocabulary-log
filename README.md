@@ -8,7 +8,7 @@ Welcome to Vocabulary log! Vocabulary Log is a Python Command Line User Interfac
 
 
 
-![VOCABULARY](./READMEimages/imiresponsive-image.png) 
+![VOCABULARY LOG](./READMEimages/imiresponsive-image.png) 
 
 
 ***
