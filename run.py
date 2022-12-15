@@ -150,8 +150,8 @@ def worksheet_log():
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
     vocabulary_worksheet.append_row([word, str(meaning)])
     long_sleep()
-    tprint("Updating Done.")
-    tprint("        Word Logged!")
+    tprint(" Done.")
+    tprint("    Word Logged!")
 
 
 def display_log_words():
@@ -257,8 +257,8 @@ def welcome_page():
     clear()
     long_sleep()
     print("""\n
-    ***   Welcome To Vocabulary Log  ***
-    *==*==*==*==*==*==*==*==**==*==*==*
+    ***   To Vocabulary Log   ***
+    *==*==*==*==*==*==*==*==**==*
     """)
     short_sleep()
     print("""\nVocabulary Log is an interactive mini version of
@@ -303,7 +303,7 @@ def display_menu():
         elif menu_choice == "5":
             exit_progm()
         else:
-            print("Invalid entry! Enter a number between 1-5: \n")
+            print("Invalid entry! A number between 1-5 is required\n")
             long_sleep()
 
 
