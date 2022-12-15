@@ -73,20 +73,20 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
 
 ![Introductory Page](./READMEimages/welcome-intro-page-img.png)
 
-The welcome page is displayed as soon as the program start to run.
++ The welcome page is displayed as soon as the program start to run.
 ***
 
 ## Display Menu
 
 ![Display Menu](./READMEimages/display-menu-img.png)
 
-Featured on the display menu is a list of options that triggers different aspect of the program
++ Featured on the display menu is a list of options that triggers different aspect of the program
 ***
 
 
 ## Option 1 - Define Word Meaning
 
-Option 1 takes a user input of word the user will like to look up for the meaning.
++ Option 1 takes a user input of word the user will like to look up for the meaning.
 
 ### Display Menu Valid Entry
 
@@ -97,7 +97,7 @@ Option 1 takes a user input of word the user will like to look up for the meanin
 
 ![Display Menu Word Look Up](./READMEimages/look-up-word-meaning-img.png)
 
-User's input word is defined based on coincidence of figure of speech.
++ User's input word is defined based on coincidence of figure of speech.
 ***
 
 ## Display Menu Input Validation
@@ -121,28 +121,30 @@ User's input word is defined based on coincidence of figure of speech.
 
 ![Display Menu- Option 2 Invalid Entry](./READMEimages/option-2-invalid-entry-img.png)
 
-Option 2 takes a "yes" or "no" input from the user, wrong input returns an error message. Valid input saves the word to google spreadsheet via API if user chooses to save the word. 
++ Option 2 takes a "yes" or "no" input from the user 
++ Wrong input returns an error message. 
++ Valid input saves the word to google spreadsheet via API, if user chooses to save the word.  
 ***
 
 ### Updating Log To Google Sheet
 
 ![Updating Log To Google Sheet](./READMEimages/updating-log-img.png)
 
-Word and it's definition is been saved to google sheet.  
++ Word and it's definition is been saved to google sheet.  
 ***
 
 ## Google Sheet Log
 
 ![Google Sheet Log](./READMEimages/google-sheet-vocabulary-log-img.png)
 
-Every words saved by the user is append to the next available new row of the google sheet.
++ Every words saved by the user is append to the next available new row of the google sheet.
 ***
 
 ## Option 3 - Retrives and Display Lists of Saved Words From Google Sheet
 
 ![Retrives Lists of Saved Words](./READMEimages/display-lists-of-saved-words-img.png)
 
-Retrieve and display lists of saved words.
++ Retrieve and display lists of saved words.
 ***
 
 ## Option 4 - Retrives and Display The Last 2 Saved Words From Google Sheet
@@ -157,7 +159,8 @@ Retrieve and display lists of saved words.
 
 ## Option 5 - Exit Program
 
-The last option will allow the user to safely exit the program after a confirmatory option is selected. An exiting, thank you and a bye bye message art print is randomly generated for the fun part of learning.
++ The last option will allow the user to safely exit the program after a confirmatory option is selected. 
++ An "exiting", "thank you", "see you again" and a "bye bye" message art print is randomly generated for the fun part of learning.
 
 ### Exit Option
 
@@ -166,10 +169,6 @@ The last option will allow the user to safely exit the program after a confirmat
 + This is displayed when a user select "n" to leave the program
 
 ![Exit](./READMEimages/exiting-prog-img.png)
-
-
-## Data Model
-
 
 
 
@@ -250,12 +249,13 @@ The `tprint ascii art` uses both the standard and the random print to create an 
 
 A wireframe is not required due to the nature of the program using the terminal shell to display out.
 
-However, I created a basic flow chart that represent a diagrammatic visual presentation flow of the program.
+However, a logic flowchart that represent a diagrammatic visual presentation flow of the program was created.
 
 ## Flow Chart
 
 ![Flowchart](./READMEimages/flow-chart-image.png)
 
+Flowchart was created using [SmartDraw](https://www.smartdraw.com/flowchart/)
 
 # 4. Technologies
 
