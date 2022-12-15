@@ -65,7 +65,7 @@ Vocabulary Log is aim at anyone aiming to improve their vocabulary and it's pres
 
 ## Title and Introductory Welcome Page
 
-![Title Page](./READMEimages/welcome-page-img.png)
+![Title Page](./READMEimages/title-page-img.png)
 
 ![Introductory Page](./READMEimages/welcome-intro-page-img.png)
 
