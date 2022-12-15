@@ -61,8 +61,6 @@ def title_page():
     """
     Display page title using tprint art
     """
-    tprint("     Welcome")
-    tprint("       To")
     tprint("  VOCABULARY")
     tprint("       LOG")
 
@@ -198,8 +196,8 @@ def display_last_2_logs():
     print(f"\n{last_log}\n")
     long_sleep()
     print("""
-    And here is your Previous log
-    *==*==*==*==*==*==*==*==*==*=*
+    ....and here is your Previous log
+    *==*==*==*==*==*==*==*==*==*==*==*
     \n""")
     print(f"\n{prev_log}")
     print("\nPretty cool....Right?\n")
@@ -257,8 +255,8 @@ def welcome_page():
     clear()
     long_sleep()
     print("""\n
-    ***   To Vocabulary Log   ***
-    *==*==*==*==*==*==*==*==**==*
+    ***  Welcome To  Vocabulary Log  ***
+    *==*==*==*==*==*==*==*==*==*==*==*==*
     """)
     short_sleep()
     print("""\nVocabulary Log is an interactive mini version of
