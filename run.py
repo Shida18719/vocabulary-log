@@ -96,7 +96,7 @@ def save_log():
             elif user_choice.lower() == "n" or user_choice.lower() == "no":
                 print("\nSaving vocabulary...")
                 worksheet_log()
-                input('\nPress "Enter" to return to display menu')
+                input('\nPress "Enter" to return to display menu\n')
                 clear()
                 display_menu()
             else:
@@ -105,7 +105,7 @@ def save_log():
         else:
             print("Invalid entry! Sorry... we have to go again.")
             short_sleep()
-            input('\nPress "Enter" to continue')
+            input('\nPress "Enter" to continue\n')
             save_log()
 
 
@@ -167,7 +167,7 @@ def display_log_words():
     fecth_log.pop(0)
     print(fecth_log)
     print("\nLooking good..... Keep it up!\n")
-    input('\nPress "Enter" to return to display menu')
+    input('\nPress "Enter" to return to display menu\n')
     display_menu()
 
 
@@ -203,7 +203,7 @@ def display_last_2_logs():
     \n""")
     print(f"\n{prev_log}")
     print("\nPretty cool....Right?\n")
-    input('\nPress "Enter" to return to display menu')
+    input('\nPress "Enter" to return to display menu\n')
 
 
 def exit_progm():
@@ -238,12 +238,12 @@ def exit_progm():
             tprint("    Nice")
             tprint("      Decision...")
             long_sleep()
-            input('\nPress "Enter" to return to display menu')
+            input('\nPress "Enter" to return to display menu\n')
             display_menu()
         else:
             print("Invalid entry! Please check.")
             short_sleep()
-            input('\nPress "Enter" to continue')
+            input('\nPress "Enter" to continue\n')
             print(exit_choice)
 
 
