@@ -4,8 +4,9 @@
 import sys
 import time
 from os import system
+import requests
 from art import tprint
-from PyDictionary import PyDictionary
+# from PyDictionary import PyDictionary
 from spellchecker import SpellChecker
 import gspread
 from google.oauth2.service_account import Credentials
@@ -28,7 +29,7 @@ vocabulary_sheet = SHEET.worksheet("vocabulary")
 
 
 # Create an instance from  module
-dictionary = PyDictionary()
+# dictionary = PyDictionary()
 spell = SpellChecker()
 
 # Global variable
@@ -107,35 +108,90 @@ def save_log():
             save_log()
 
 
+# def search_word():
+#     """ 
+#     PyDictionary stopped working - 
+#     rendering this function unable to get words meaning from Dictionary.
+#     Menu function #1,
+#     Take user input and display word meaning
+#     Search a word in dictionary and print its coincidences by types
+#     Check user misspelt word, returns the correct word
+#     Check input of empty or whitespace
+#     Disables PyDictionary errors message
+#     """
+#     global word
+#     word = input("\nEnter new word you want to look up: \n")
+#     corrected_word = spell.correction(word)
+
+#     if word is not corrected_word:
+#         print("corrected word:", corrected_word)
+#         if word.count(' ') > 0:
+#             print("\nOops.. Wrong input!\n")
+#     else:
+#         global meaning
+#         meaning = dictionary.meaning(corrected_word, disable_errors=True)
+#         types = ["Noun", "Verb", "Adjective", "Adverb"]
+#         if meaning is None:
+#             print("Word not found in dictionary. Please double check!")
+#         else:
+#             for meaning_type in types:
+#                 try:
+#                     print(f"{meaning_type} {meaning[meaning_type]}")
+#                 except KeyError:
+#                     continue
+
+
+
+
 def search_word():
     """
+    Version 2 of search_word function.
     Menu function #1,
-    Take user input and display word meaning
-    Search a word in dictionary and print its coincidences by types
-    Check user misspelt word, returns the correct word
-    Check input of empty or whitespace
-    Disables PyDictionary errors message
+    Takes user input, checks for spelling corrections,
+    fetches definition using Free Dictionary API, and prints them.
+    Only logs if valid definition is found.
     """
-    global word
-    word = input("\nEnter new word you want to look up: \n")
-    corrected_word = spell.correction(word)
+    global word, meaning
+    word = input("\nEnter a new word you want to look up: \n").strip().lower()
 
-    if word is not corrected_word:
-        print("corrected word:", corrected_word)
-        if word.count(' ') > 0:
-            print("\nOops.. Wrong input!\n")
-    else:
-        global meaning
-        meaning = dictionary.meaning(corrected_word, disable_errors=True)
-        types = ["Noun", "Verb", "Adjective", "Adverb"]
-        if meaning is None:
-            print("Word not found in dictionary. Please double check!")
-        else:
-            for meaning_type in types:
-                try:
-                    print(f"{meaning_type} {meaning[meaning_type]}")
-                except KeyError:
-                    continue
+    # Spelling correction
+    corrected_word = spell.correction(word)
+    if word != corrected_word:
+        print(f"Did you mean: {corrected_word}?")
+        word = corrected_word
+
+    if " " in word:
+        print("\nOops.. Please enter only one word!\n")
+        return
+
+    url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
+    response = requests.get(url)
+
+    if response.status_code != 200:
+        print("Word not found. Please double check.")
+        meaning = None
+        return
+
+    data = response.json()
+    meanings = data[0].get("meanings", [])
+
+    if not meanings:
+        print("No definitions available for this word.")
+        meaning = None
+        return
+
+    # Formatted meaning (for display and logging)
+    meaning = ""
+    for item in meanings:
+        part_of_speech = item.get("partOfSpeech", "").capitalize()
+        definitions = item.get("definitions", [])
+        print(f"\n{part_of_speech}:")
+        for d in definitions:
+            definition = d.get("definition", "")
+            print(f"- {definition}")
+            meaning += f"{part_of_speech}: {definition}\n"
+
+    meaning = meaning.strip()  # remove trailing newline
 
 
 def worksheet_log():
@@ -144,6 +200,10 @@ def worksheet_log():
     looked up by the user.
     tprint prints updating message
     """
+    if not meaning:
+        print("Nothing to log. No valid definition found.")
+        return
+    
     print("\nUpdating vocabulary log...\n")
     vocabulary_worksheet = SHEET.worksheet("vocabulary")
     vocabulary_worksheet.append_row([word, str(meaning)])
