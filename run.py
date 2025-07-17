@@ -153,26 +153,57 @@ def search_word():
     """
     global word, meaning
     word = input("\nEnter a new word you want to look up: \n").strip().lower()
+    
+    # Check for empty, whitespace, spaces, or non-letters
+    if not word:
+        print("You did not enter any word. Please try again.\n")
+        meaning = None
+        return
+
+    if " " in word:
+        print("Please enter only one word — no spaces allowed.\n")
+        meaning = None
+        return
+
+    if not word.isalpha():
+        print("Only alphabetic characters are allowed. Please try again.\n")
+        meaning = None
+        return
 
     # Spelling correction
     corrected_word = spell.correction(word)
-    if word != corrected_word:
+    
+    if corrected_word is None or corrected_word.strip() == "":
+        print("Sorry, no spelling suggestions found. Please try again with a different word.")
+        meaning = None
+        return
+    
+    if corrected_word != word:
         print(f"Did you mean: {corrected_word}?")
         word = corrected_word
-
-    if " " in word:
-        print("\nOops.. Please enter only one word!\n")
-        return
+    
+    else:
+        word = word.strip() 
 
     url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}"
-    response = requests.get(url)
-
-    if response.status_code != 200:
-        print("Word not found. Please double check.")
+    
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        
+    except requests.exceptions.RequestException as e:
+        print(f"Word not found. Please double check: {e}")
+        
         meaning = None
         return
 
     data = response.json()
+    
+    if isinstance(data, dict) and data.get("title") == "No Definitions Found":
+        print("Word not found. Please double check.")
+        meaning = None
+        return
+    
     meanings = data[0].get("meanings", [])
 
     if not meanings:
